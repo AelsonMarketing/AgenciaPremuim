@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>Agência PREMIUM - Kwai</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #ff6700, #ff8c42);
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: rgba(255, 103, 0, 0.9);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header img {
+            width: 100px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            border-radius: 50%;
+            border: 3px solid white;
+        }
+
+        nav {
+            text-align: center;
+            background-color: rgba(255, 140, 66, 0.9);
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        section {
+            margin-bottom: 3rem;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        section h2 {
+            color: white;
+            border-left: 5px solid #ff8c42;
+            padding-left: 10px;
+        }
+
+        .videos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .video-card {
+            background-color: white;
+            padding: 1.5rem;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s;
+        }
+
+        .video-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .video-card iframe {
+            width: 100%;
+            height: 200px;
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 1.5rem 0;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes gradientMove {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        body {
+            background-size: 200% 200%;
+            animation: gradientMove 10s ease infinite;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .videos {
+                grid-template-columns: 1fr;
+            }
+
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header img {
+                width: 80px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Logo da Agência">
+        <h1>Agência PREMIUM - Kwai</h1>
+    </header>
+
+    <nav>
+        <a href="#sobre">Sobre a Agência</a>
+        <a href="#videos">Treinamento</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
+    <div class="container">
+        <section id="sobre">
+            <h2>Sobre a Agência</h2>
+            <p>Somos uma agência especializada em criar e gerenciar conteúdos para o Kwai. Nossa equipe conta com 29 membros dedicados a produzir os melhores vídeos curtos e a oferecer suporte para criadores.</p>
+        </section>
+
+        <section id="videos">
+            <h2>Treinamento de Edição</h2>
+            <div class="videos">
+                <div class="video-card">
+                    <iframe src="https://www.youtube.com/embed/example1" frameborder="0" allowfullscreen></iframe>
+                    <p>Tutorial: Como criar vídeos de impacto no Kwai</p>
+                </div>
+                <div class="video-card">
+                    <iframe src="https://www.youtube.com/embed/example2" frameborder="0" allowfullscreen></iframe>
+                    <p>Dicas de edição para vídeos curtos</p>
+                </div>
+                <div class="video-card">
+                    <iframe src="https://www.youtube.com/embed/example3" frameborder="0" allowfullscreen></iframe>
+                    <p>Como utilizar as ferramentas do Kwai</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato">
+            <h2>Contato</h2>
+            <p>Entre em contato conosco pelo e-mail <a href="mailto:contato@agenciapremium.com">contato@agenciapremium.com</a> ou pelo WhatsApp: (XX) XXXXX-XXXX.</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Agência PREMIUM - Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
